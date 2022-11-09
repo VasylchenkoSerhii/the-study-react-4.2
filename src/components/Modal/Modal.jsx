@@ -11,7 +11,7 @@ export default function Modal({ toggleModal, children }) {
         return () => {
             window.removeEventListener('keydown', handleClickByEscape);
         };
-    }, []);
+    });
 
     const  handleClickByEscape = e => {
         if (e.code === "Escape") {
