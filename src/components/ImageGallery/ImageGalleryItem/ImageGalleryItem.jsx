@@ -6,7 +6,7 @@ export default function ImageGalleryItem({ id, webformatURL, tags, largeImageURL
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const toggelModal = () => {
+    const toggleModal = () => {
         setIsModalOpen(prev => !prev);
     };
 
@@ -17,10 +17,10 @@ export default function ImageGalleryItem({ id, webformatURL, tags, largeImageURL
                     className={scss.ImageGalleryItemImage}
                     src={webformatURL}
                     alt={tags}
-                    onClick={toggelModal}
+                    onClick={toggleModal}
                 />
             </li>
-            {isModalOpen && <Modal toggleModal={toggelModal}>
+            {isModalOpen && <Modal toggleModal={toggleModal}>
                 <img className={scss.ModalImg} src={largeImageURL} alt={tags} />
             </Modal>}
         </>

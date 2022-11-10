@@ -13,7 +13,7 @@ export default function Modal({ toggleModal, children }) {
         };
     });
 
-    const  handleClickByEscape = e => {
+    const handleClickByEscape = e => {
         if (e.code === "Escape") {
             toggleModal();
         };
